@@ -1,0 +1,6 @@
+path: dataset  # relatif terhadap file ini
+train: train/images
+val: val/images
+
+nc: 4  # jumlah kelas, ubah sesuai dataset Anda
+names: ['Rp100', 'Rp200', 'Rp500', 'Rp1000']  # sesuaikan dengan label asli Anda

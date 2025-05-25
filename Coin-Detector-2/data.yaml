@@ -1,0 +1,23 @@
+names:
+- '100'
+- 1000-angklung
+- 1000-sawit
+- '200'
+- 500-kuning
+- 500-silver
+nc: 6
+roboflow:
+  license: CC BY 4.0
+  project: coin-detector-ix0wf
+  url: https://universe.roboflow.com/a1-s8drg/coin-detector-ix0wf/dataset/2
+  version: 2
+  workspace: a1-s8drg
+train: C:\Projek_CV\Mohammad_allif_alfath_4TID\Coin-Detector-2\/train/images
+val: C:\Projek_CV\Mohammad_allif_alfath_4TID\Coin-Detector-2\/val/images
+test: C:\Projek_CV\Mohammad_allif_alfath_4TID\Coin-Detector-2\/test/images
+
+
+
+
+
+
