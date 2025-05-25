@@ -1,4 +1,7 @@
 
+pip install ultralytics
+pip install opencv-python
+
 Coin Detector - v2 2024-06-10 11:34am
 ==============================
 
