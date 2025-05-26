@@ -5,14 +5,20 @@ import cv2
 model = YOLO(r"C:\Projek_CV\Mohammad_allif_alfath_4TID\runs\detect\train20\weights\best.pt")
 
 # Buka webcam (0 untuk webcam utama)
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 # Daftar label sesuai urutan di data.yaml
 class_to_nominal = {
-    0: 100,
-    3: 200,
-    4: 500,
-    5: 500  # 500-silver disamakan nilainya dengan 500-kuning
+    0: 100,   # "100"
+    1: 100,   # "seratus"
+    2: 1000,  # "1000-angklung"
+    3: 1000,  # "1000-silver"
+    4: 1000,  # "1000-sawit"
+    5: 1000,  # "1000-SAWIT"
+    6: 200,   # "200"
+    7: 200,   # "200-silver"
+    8: 500,   # "500-kuning"
+    9: 500    # "500-silver"
 }
 
 while True:
@@ -22,7 +28,6 @@ while True:
 
     # Jalankan deteksi
     results = model(frame, stream=True)
-
     total_money = 0
 
     for r in results:
