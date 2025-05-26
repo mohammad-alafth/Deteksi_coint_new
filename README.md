@@ -1,4 +1,4 @@
-# Deteksi dan Klasifikasi Uang Koin Menggunakan OpenCV Python
+# Deteksi Uang Koin Menggunakan OpenCV Python
 
 
 ## Background
