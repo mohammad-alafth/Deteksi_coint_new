@@ -2,10 +2,13 @@ Deteksi dan Klasifikasi Uang Koin Menggunakan OpenCV Python
 
 
 Latar Belakang
-
-Seiring dengan kemajuan teknologi pengolahan citra digital, berbagai solusi otomatis berbasis komputer kini banyak diterapkan dalam kehidupan sehari-hari, termasuk dalam mengenali objek fisik seperti uang koin. Dalam konteks keuangan mikro, seperti pada usaha kecil, sistem parkir manual, atau mesin penukar uang, proses identifikasi nilai uang koin sering kali masih dilakukan secara manual. Hal ini tidak hanya menghabiskan waktu, tetapi juga rentan terhadap kesalahan manusia.
-Penggunaan teknologi computer vision seperti OpenCV memberikan alternatif yang cepat, efisien, dan dapat diandalkan untuk mengenali dan mengklasifikasikan nominal uang koin secara otomatis. Dengan memanfaatkan citra digital dan teknik deteksi kontur, sistem ini dapat mengidentifikasi koin berdasarkan bentuk, luas area, dan tingkat kebulatan (circularity).
-Sistem ini dirancang untuk membaca gambar koin, melakukan proses pendeteksian tepi (Canny), lalu menghitung kontur dari objek yang terdeteksi. Berdasarkan ciri visual dan ukuran area dari kontur tersebut, sistem dapat memperkirakan nominal dari setiap koin, seperti Rp100, Rp200, Rp500, dan Rp1000. Total nilai uang kemudian dihitung secara otomatis dan ditampilkan secara real-time.
+Seiring dengan kemajuan teknologi pengolahan citra digital, berbagai solusi otomatis berbasis komputer kini banyak diterapkan dalam kehidupan sehari-hari, 
+termasuk dalam mengenali objek fisik seperti uang koin. Dalam konteks keuangan mikro, seperti pada usaha kecil, sistem parkir manual, atau mesin penukar uang, 
+proses identifikasi nilai uang koin sering kali masih dilakukan secara manual. Hal ini tidak hanya menghabiskan waktu, tetapi juga rentan terhadap kesalahan manusia. 
+Penggunaan teknologi computer vision seperti OpenCV memberikan alternatif yang cepat, efisien, dan dapat diandalkan untuk mengenali dan mengklasifikasikan nominal uang 
+koin secara otomatis. Proyek ini bertujuan untuk mengembangkan sistem yang mampu mendeteksi dan mengklasifikasikan koin rupiah dengan nominal Rp100, Rp200, Rp500, dan Rp1000 
+menggunakan model YOLOv8 yang telah dilatih khusus, serta mengintegrasikannya dengan OpenCV untuk melakukan penghitungan total nilai secara otomatis dan menampilkan hasilnya 
+secara visual pada video streaming webcam. Total nilai uang kemudian dihitung secara otomatis dan ditampilkan secara real-time.
 
 Tahapan
 
