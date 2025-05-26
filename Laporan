@@ -13,22 +13,8 @@ Tahapan proses dalam proyek ini dapat dijelaskan sebagai berikut:
 - Pengambilan Data Gambar
  Gambar-gambar koin dari berbagai nominal disimpan dalam folder dataset yang telah dikelompokkan berdasarkan nilai koin.
 
-
-- Preprocessing Citra
- Gambar akan diproses dengan metode Gaussian Blur untuk mengurangi noise, dilanjutkan dengan deteksi tepi menggunakan metode Canny, dan kemudian dilakukan dilasi serta morfologi untuk memperjelas kontur.
-
-
-- Deteksi Kontur
- Kontur dari objek pada gambar dianalisis untuk menemukan bentuk koin. Kontur yang memiliki tingkat kebulatan tinggi (circularity > 0.7) diproses lebih lanjut untuk dianalisis ukurannya.
-
-
-- Klasifikasi Nilai Koin
- Berdasarkan luas area kontur, sistem mengelompokkan koin ke dalam nominal tertentu, seperti Rp100, Rp200, Rp500, dan Rp1000.
-
-
 - Perhitungan Total Nilai
  Semua koin yang dikenali akan dijumlahkan untuk menampilkan total nilai uang yang terdapat dalam gambar.
-
 
 - Visualisasi Hasil
  Nilai masing-masing koin akan ditampilkan pada posisi koin tersebut, serta total uang akan ditampilkan pada satu frame hasil visualisasi akhir.
