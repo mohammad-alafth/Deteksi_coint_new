@@ -6,6 +6,14 @@ pip install opencv-python
 Coin Detector - v2 2024-06-10 11:34am
 ==============================
 
+informasi dataset dahulu
+100 -> 19
+1000 angklung -> 25
+1000 sawit -> 28
+200 -> 74
+500 kuning -> 7
+500 silver -> 45 
+
 This dataset was exported via roboflow.com on May 19, 2025 at 4:35 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
