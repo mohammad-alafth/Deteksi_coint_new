@@ -30,4 +30,11 @@ The following pre-processing was applied to each image:
 
 No image augmentation techniques were applied.
 
+100 -> 19
+1000 angklung -> 25
+1000 sawit -> 28
+200 -> 74
+500 silver -> 45
+500 kuning -> 7
+
 

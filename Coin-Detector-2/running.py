@@ -2,23 +2,22 @@ from ultralytics import YOLO
 import cv2
 
 # Load model hasil training
-model = YOLO(r"C:\Projek_CV\Mohammad_allif_alfath_4TID\runs\detect\train20\weights\best.pt")
+model = YOLO(r"C:\Projek_CV\runs\detect\train25\weights\best.pt")
 
 # Buka webcam (0 untuk webcam utama)
 cap = cv2.VideoCapture(1)
 
-# Daftar label sesuai urutan di data.yaml
+# Mapping index kelas (sesuai urutan data.yaml) ke nilai uang
 class_to_nominal = {
-    0: 100,   # "100"
-    1: 100,   # "seratus"
-    2: 1000,  # "1000-angklung"
-    3: 1000,  # "1000-silver"
-    4: 1000,  # "1000-sawit"
-    5: 1000,  # "1000-SAWIT"
-    6: 200,   # "200"
-    7: 200,   # "200-silver"
-    8: 500,   # "500-kuning"
-    9: 500    # "500-silver"
+    0: 1000,  # coin_1000_e2010
+    1: 1000,  # coin_1000_e2016
+    2: 100,   # coin_100_e1999
+    3: 100,   # coin_100_e2016
+    4: 200,   # coin_200_e2003
+    5: 200,   # coin_200_e2016
+    6: 500,   # coin_500_e2003
+    7: 500,   # coin_500_e2016
+    8: 50     # coin_50_1999
 }
 
 while True:
@@ -27,13 +26,13 @@ while True:
         break
 
     # Jalankan deteksi
-    results = model(frame, stream=True)
+    results = model.predict(source=frame, stream=True, verbose=False)
     total_money = 0
 
     for r in results:
         for box in r.boxes:
-            cls = int(box.cls[0])
-            conf = float(box.conf[0])
+            cls = int(box.cls[0].item())
+            conf = float(box.conf[0].item())
             x1, y1, x2, y2 = map(int, box.xyxy[0])
 
             # Hanya proses jika termasuk koin
